@@ -17,8 +17,20 @@ namespace finalMVC.Controllers
         {
             return View();
         }
+		public IActionResult About()
+		{
+			return View();
+		}
+		public IActionResult Formation()
+		{
+			return View();
+		}
+		public IActionResult Contact()
+		{
+			return View();
+		}
 
-        public IActionResult Privacy()
+		public IActionResult Privacy()
         {
             return View();
         }
