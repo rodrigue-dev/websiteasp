@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using finalMVC.Models;
 
@@ -10,9 +11,11 @@ using finalMVC.Models;
 namespace finalMVC.Migrations
 {
     [DbContext(typeof(SchoolCoreDBContext))]
-    partial class SchoolCoreDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230608065114_third")]
+    partial class third
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

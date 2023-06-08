@@ -1,0 +1,53 @@
+﻿@model finalMVC.Models.Matiere
+@{
+    ViewBag.Title = "Matieres";
+    Layout = "~/Views/Shared/_BackendLayout.cshtml";
+}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Matieres</h1>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+       <div class="col-12">
+            <div class="card panel-default">
+             
+                <!-- /.panel-heading -->
+                <div class="card-body">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @using (Html.BeginForm("Create"))
+                    {
+                        @Html.AntiForgeryToken()
+                        <form role="form" method="post" class="mb-lg" asp-controller="Security" asp-action="SubmitPost">
+
+                            <div class="form-group has-feedback">
+                                @Html.TextBoxFor(model => model.Titre, new { @type = "text", @placeholder = "Enter titre", @class = "form-control" })
+                                <span class="fa fa-envelope form-control-feedback text-muted"></span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                @Html.TextBoxFor(model => model.Description, new { @type = "text", @placeholder = "Description", @required = "required", @class = "form-control" })
+                                <span class="fa fa-lock form-control-feedback text-muted"></span>
+                            </div>
+                            <div class="clearfix">
+
+                                @*<div class="pull-right">
+                            <a href="@Url.Action("Recover", "Pages")" class="text-muted">Forgot your password?</a>
+                            </div>*@
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary mt-lg">Save</button>
+                        </form>
+
+                    }
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            </div>
+	</div>
+</div>
+
+            <!-- /.panel -->
+        

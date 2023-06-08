@@ -3,12 +3,16 @@ using finalMVC;
 using finalMVC.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
+using finalMVC.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 builder.Services.AddDbContext<SchoolCoreDBContext>();
+builder.Services.AddScoped<ILogin, AuthenticateLogin>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

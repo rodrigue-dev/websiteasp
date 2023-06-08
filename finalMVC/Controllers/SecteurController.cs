@@ -3,27 +3,27 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace finalMVC.Controllers
 {
-    public class FormationsController : Controller
+    public class SecteurController : Controller
     {
-        // GET: FormationsController
+        // GET: SecteurController
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: FormationsController/Details/5
+        // GET: SecteurController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: FormationsController/Create
+        // GET: SecteurController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: FormationsController/Create
+        // POST: SecteurController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -38,13 +38,13 @@ namespace finalMVC.Controllers
             }
         }
 
-        // GET: FormationsController/Edit/5
+        // GET: SecteurController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: FormationsController/Edit/5
+        // POST: SecteurController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -59,13 +59,13 @@ namespace finalMVC.Controllers
             }
         }
 
-        // GET: FormationsController/Delete/5
+        // GET: SecteurController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: FormationsController/Delete/5
+        // POST: SecteurController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

@@ -16,6 +16,9 @@ namespace finalMVC.Models
             modelBuilder.Entity<Section>().ToTable("Section");
             modelBuilder.Entity<Visiteur>().ToTable("Visiteur");
             modelBuilder.Entity<Formation>().ToTable("Formation");
+            modelBuilder.Entity<User>(entity => {
+                entity.HasKey(k => k.ID);
+            });
 
 
             modelBuilder.Entity<Formation>().HasKey(b => b.ID).HasName("PK_Formation");
@@ -34,6 +37,6 @@ namespace finalMVC.Models
             optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
         public DbSet<Formation> Formations { get; set; }
-
+        public DbSet<User> UserLogin { get; set; }
     }
 }
